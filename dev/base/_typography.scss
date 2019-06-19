@@ -79,9 +79,9 @@ a:visited {
     @include line-height-kit(1.4, 1.45, 1.5, 1.55, 1.65);
 }
 
-.text-center {text-align: center;}
-.text-white {color: #fff;}
-.text-accent { color: $color_main; }
+.text-center {text-align: center !important;}
+.text-white {color: #fff !important;}
+.text-accent { color: $color_main !important; }
 
 
 

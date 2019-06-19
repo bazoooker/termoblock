@@ -12,7 +12,7 @@ $(window).scroll(function() {
 $(document).ready(function(){
 
 
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.js-content-slider', {
       direction: 'vertical',
       pagination: {
         el: '.swiper-pagination',

@@ -1,0 +1,9 @@
+.section {
+	height: 100%;
+	@include flex-row(wrap,flex-start,center);
+}
+
+.section_hero {
+	background-image: url(/img/bg/bg-hero.jpg);
+	@include bg-cover;
+}

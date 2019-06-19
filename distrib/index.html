@@ -50,32 +50,36 @@
 
 
 
-    <body class="page-wrapper">
+    <body class="wrapper">
             
 
-        <header class="page-header">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque minima, placeat quam eaque minus facilis. Sed consequatur, corporis odio ex repudiandae voluptates tempore repellendus vel consectetur. Quasi eum magni, molestiae!</p>
+        <header class="header">
+            <div class="container header__content">
+                <div class="header__nav">
+                    <div class="nav">
+                        <a href="/" class="nav__link">Продукция</a>
+                        <a href="/" class="nav__link">Сервис</a>
+                        <a href="/" class="nav__link">Металлообработка</a>
+                        <a href="/" class="nav__link">Новости</a>
+                        <a href="/" class="nav__link">Компания</a>
+                        <a href="/" class="nav__link">Контакты</a>
+                    </div>
+                </div>
+                <div class="header__options">
+                    <div class="user-options">
+                        <button class="user-options__city">
+                            <b>Ваш город:</b> 
+                            <span>Москва</span>&nbsp;&nbsp;<i class="fa fa-caret-up" aria-hidden="true"></i>
+                            <!--в спан будет индджектиться выбранный город-->
+                        </button>
+                        <a href="tel:88001003734" class="user-options__tel"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;8-800-100-37-34</a>
+                    </div>
+                </div>
+            </div>
         </header>
 
 
         <style>
-            .page-header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100px;
-                background-color: rgba(0,0,0,.4);
-                z-index: 2;
-            }
-            .content {
-                overflow-x: hidden;
-                position: fixed;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-            }
             .swiper-slide {
                 background-color: whitesmoke;
                 box-shadow: 0 0 0 5px red inset;
@@ -84,43 +88,48 @@
             .swiper-slide-content {
                 margin: .1vh;
             }
-            .swiper-container {
-                height: 100%;
-            }
         </style>
 
         <main class="content" role="main">
-            <div class="swiper-container">
+            <div class="swiper-container content-slider js-content-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                    <div class="swiper-slide-content">
-                        <h1>Заголовок</h1>
-                        <div class="row">
-                            <div class="col-4">
-                                <h4>подзаголовок</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem harum labore porro quibusdam enim eaque, reprehenderit? Est blanditiis nostrum pariatur, atque! Ex ipsam, rerum molestiae, velit iusto nihil! Quas, sapiente?</p>
+                        <section class="section section_hero">
+                            <div class="container">
+                                <img src="/" alt="" class="logo">
+
+                                <!-- todo -->
+                                <!-- статичный заголосок заменить на слайдер -->
+                                <h1 class="text-white">Самая широкая линейка<br/>пластин для теплообменников в&nbsp;России</h1>
+                                <a href="" class="btn btn_link text-white">Подробнее&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></a>
                             </div>
-                            <div class="col-4">
-                                <h4>подзаголовок</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam asperiores aperiam, eaque illum iure exercitationem adipisci error deserunt fugiat neque, temporibus aspernatur est modi ex nobis similique expedita quam nostrum.</p>
-                            </div>
-                            <div class="col-4">
-                                <h4>подзаголовок</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, at rerum. Alias aliquid id, error saepe quaerat, quis maxime at aliquam asperiores amet recusandae praesentium culpa blanditiis explicabo, excepturi dolore?</p>
-                            </div>
-                            <div class="col-6">
-                                <img class="img-resp" src="/img/logo.png" alt="">
-                            </div>
-                            <div class="col-6">
-                                <img class="img-resp" src="/img/logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="btn btn_main btn_size-l">Какая-то кнопка</a>
-                        </div>
+                        </section>
                     </div>
+                    <div class="swiper-slide">
+                        <section class="section section_numbers">
+                            <div class="container">
+                                <h2>Термоблок в цифрах</h2>
+
+                                <div class="big-nums">
+                                    <div class="big-nums__item">
+                                        <span class="big-nums__digit">1997</span>
+                                        <p>Год основания<br/>компании</p>
+                                    </div>
+                                    <div class="big-nums__item">
+                                        <span class="big-nums__digit">1997</span>
+                                        <p>Год основания<br/>компании</p>
+                                    </div>
+                                    <div class="big-nums__item">
+                                        <span class="big-nums__digit">1997</span>
+                                        <p>Год основания<br/>компании</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section__button">
+                                <a href="/" class="btn btn_triangle">Узнать<br/>больше&nbsp;&nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            </div>
+                        </section>
                     </div>
-                    <div class="swiper-slide">Slide 2</div>
                     <div class="swiper-slide">Slide 3</div>
                 </div>
                 <div class="swiper-pagination"></div>

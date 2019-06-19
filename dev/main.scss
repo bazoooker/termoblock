@@ -25,11 +25,14 @@
 @import "block/helper/helper";
 @import "block/btn/btn";
 
-@import "block/footer/footer";
 @import "block/header/header";
+@import "block/footer/footer";
+@import "block/content/content";
+@import "block/content-slider/content-slider";
 @import "block/header-sticky/sticky-header";
 
 @import "block/hero/hero";
+@import "block/section/section";
 
 @import "block/logo/logo";
 @import "block/icon-text/icon-text";
@@ -126,7 +129,7 @@
 @import "block/tab-link/tab-link";
 // @import "block/tooltip/tooltip";
 // @import "block/to-top/to-top";
-// @import "block/user-options/user-options";
+@import "block/user-options/user-options";
 // @import "block/view/view";
 @import "block/tel/tel";
 @import "block/link-social/link-social";
