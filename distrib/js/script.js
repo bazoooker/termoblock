@@ -11,6 +11,16 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
 
+
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      mousewheel: true,
+    });
+
         var swiper = new Swiper('.swiper-hero', {
           pagination: {
             el: '.swiper-pagination',
