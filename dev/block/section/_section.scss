@@ -1,6 +1,12 @@
 .section {
+	position: relative;
 	height: 100%;
 	@include flex-row(wrap,flex-start,center);
+	overflow: hidden;
+
+	h2 {
+		font-size: 6rem;
+	}
 }
 
 .section_hero {
@@ -13,4 +19,44 @@
 	.logo {
 		margin: 0 0 4.5rem 0;
 	}
+}
+
+.section_numbers {
+	background-image: url(/img/bg/bg-scheme.png);
+	@include bg-cover;
+}
+
+.section__button {
+	position: absolute;
+	bottom: -14rem;
+	right: 15rem;
+	width: 25rem;
+	height: 25rem;
+
+	a {
+		display: block;
+		padding: 3.2rem 0 0 0;
+		height: 50%;
+		color: #fff;
+		font-family: $russo;
+		font-size: 2rem;
+		text-align: center;
+		z-index: 3;
+	}
+	&::before {
+		@include pseudo;
+		width: 100%;
+		height: 100%;
+		background-color: $color_main;
+		z-index: 2;
+		transform: rotate(45deg);
+	}
+}
+
+.section_products {
+	background: linear-gradient(270deg, #ECECEC 1%, rgba(236, 236, 236, 0) 100%);
+}
+
+.section_partners {
+	background: linear-gradient(270deg, #ECECEC 1%, rgba(236, 236, 236, 0) 100%);
 }

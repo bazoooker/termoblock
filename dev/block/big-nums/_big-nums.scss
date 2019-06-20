@@ -1,15 +1,23 @@
 .big-nums {
 	position: relative;
+}
+
+.big-nums__digit {
+	position: relative;
+	display: block;
+	padding: 0 0 3.7rem 0;
+	margin: 0 0 2.3rem 0;
+	color: $color_gray;
+	font-size: 8rem;
+	font-family: $russo;
+	line-height: .8;
 	&::before {
-		position: absolute;
-	    content: '18 959';
-	    width: 600px;
-	    height: 148px;
-	    opacity: .06;
-	    font-size: 192px;
-	    left: -25px;
-	    top: -13px;
-	    line-height: .8;
+		@include pseudo;
+		bottom: 0;
+		left: 0px;
+		width: 54px;
+	    height: 5px;
+	    background-color: $color_main;
 	}
 }
 

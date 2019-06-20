@@ -50,3 +50,15 @@
 		}
 		i {font-size: .7em;}
 	}
+
+	.link_download {
+		font-size: 2rem;
+		svg {
+			transform: translateY(8px);
+		}
+		span {
+			text-decoration: underline;
+			text-decoration-style: dotted;
+			text-underline-position: under; 
+		}
+	}
