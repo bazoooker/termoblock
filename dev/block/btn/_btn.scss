@@ -1,52 +1,33 @@
 
-.btn, input.btn,
-.btn:visited, input.btn:visited{
+.btn, 
+.btn:visited, 
+input.btn,
+input.btn:visited{
 	display: inline-block;
 	position: relative;	
 	overflow: hidden;
 	text-decoration: none !important;
-	font-weight: 600;
 	cursor: pointer !important;
 	line-height: 100%;
-	text-transform: uppercase;
 	text-align: center;
-	background: none;
-	// font-size: 16px !important;
 	transition: 300ms;
 	letter-spacing: 1px;
-
-	&:hover {
-		text-decoration: none;
-		cursor: pointer !important;
-	}
-
-	// &.disabled {
-	// 	background-color: lightgray !important;
-	// 	color: #333 !important;
-	// 	cursor: not-allowed !important;
-	// 	opacity: .85;
-	// 	border: 2px solid gray;
-	// 	&:hover {
-	// 		border: 2px solid #666;
-	// 		opacity: 1;
-	// 	}
-	// }
 }
 
 
-.btn_main, input.btn_main {
+.btn_main,
+.btn_main :visited,
+input.btn_main
+input.btn_main:visited {
+	background-color: $color_main;
 	color: #fff;
-	background: linear-gradient(90deg, #F72220 2.72%, #F53829 100%);
-	box-shadow: 0px 0px 12px rgba(40, 71, 133, 0.4);
-	border-radius: 40px;
-	color: #fff;
-	// &:active,
-	// &:focus 	{ color: $black; background-color: #fff;}
-	// &:hover 	{ 
-	// 	background-color: #fff;
-	// 	border: 2px solid $black; 
-	// }
-	&:visited {color: #fff;}
+	&:hover { 
+        text-decoration: underline;
+    }
+    &:focus,
+    &:active { 
+        background-color: transparent;
+    }
 }
 
 .btn_call-icon {
@@ -101,22 +82,20 @@
 
 .btn_size-xl {
 	@include font-kit(19px, 18px, 17px, 16px, 14px);
-	padding: 28px 55px;
+	padding: 14px 18px;
 }
 
 .btn_size-l {
 	@include font-kit(16px, 16px, 15px, 15px, 14px);
-	padding: 18px 40px;
+	padding: 12px 16px;
 }
 .btn_size-m {
-	@include font-kit(15px, 15px, 14px, 14px, 13px);
-	padding: 16px 36px;
-	// padding: $gutter/2.2 $gutter*1.5;
+	font-size: 1.5rem;
+	padding: 10px 14px;
 }
 .btn_size-s {
 	@include font-kit(14px, 14px, 13px, 13px, 12px);
-	padding: 14px 32px;
-	// padding: $gutter/3.5 $gutter*1.25;
+	padding: 8px 12px;
 }
 
 

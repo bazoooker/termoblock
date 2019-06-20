@@ -24,6 +24,7 @@
 // blocks
 @import "block/helper/helper";
 @import "block/btn/btn";
+@import "block/link/link";
 
 @import "block/header/header";
 @import "block/footer/footer";
@@ -48,6 +49,7 @@
 // @import "block/partner-thumb/partner-thumb";
 @import "block/gallery/gallery";
 @import "block/gallery-slide/gallery-slide";
+@import "block/hero-slider/hero-slider";
 // @import "block/socials/socials";
 // @import "block/clipped-img/clipped-img";
 // @import "block/chart/chart";
@@ -121,7 +123,7 @@
 // @import "block/search-form/search-form";
 // @import "block/select/select";
 // @import "block/shop-option/shop-option";
-// @import "block/sidebar/sidebar";
+@import "block/sidebar/sidebar";
 // @import "block/signup/signup";
 @import "block/signup-form/signup-form";
 // @import "block/sort/sort";

@@ -21,32 +21,44 @@ $(document).ready(function(){
       mousewheel: true,
     });
 
-        var swiper = new Swiper('.swiper-hero', {
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
+    var swiper = new Swiper('.js-hero-slider', {
+      pagination: {
+        el: '.js-hero-slider-progressbar',
+        type: 'progressbar',
+      },
+      mousewheel: true,
+      navigation: {
+        nextEl: '.js-hero-slider-next',
+        prevEl: '.js-hero-slider-prev',
+      },
+    });
+
+        // var swiper = new Swiper('.swiper-hero', {
+        //   pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        //   },
+        // });
 
 
 
-        var feedbackSwiper = new Swiper('.swiper-feedback', {
-          speed: 800,
-            navigation: {
-                nextEl: '.swiper-feedback__btn-next',
-                prevEl: '.swiper-feedback__btn-prev',
-            },
-        });
+        // var feedbackSwiper = new Swiper('.swiper-feedback', {
+        //   speed: 800,
+        //     navigation: {
+        //         nextEl: '.swiper-feedback__btn-next',
+        //         prevEl: '.swiper-feedback__btn-prev',
+        //     },
+        // });
 
 
 
-        var teachingSwiper = new Swiper('.swiper-teaching', {
-          speed: 300,
-          pagination: {
-            clickable: true,
-            el: '.teaching-pagination',
-          },
-        });
+        // var teachingSwiper = new Swiper('.swiper-teaching', {
+        //   speed: 300,
+        //   pagination: {
+        //     clickable: true,
+        //     el: '.teaching-pagination',
+        //   },
+        // });
 
 
 

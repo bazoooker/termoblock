@@ -2,4 +2,28 @@
 	flex: 1 1 100%;
 	min-width: 100%;
 	@include flex-row(nowrap,space-between,center);
+	margin-left: 5rem;
 }
+
+.user-options__city {
+	padding: 8px 14px;
+	background-color: transparent;
+	outline: none;
+	border:none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Russo One';
+	font-size: 1.5rem;
+	span {
+		color: $color_main;
+		text-decoration: underline;
+		text-decoration-style: dashed;
+	}
+	&:hover {
+		background-color: #fff;
+		color: $color_gray;
+	}
+}
+.user-options__tel {}
