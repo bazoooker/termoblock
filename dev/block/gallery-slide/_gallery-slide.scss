@@ -1,5 +1,5 @@
 .gallery-slide {
-	height: 572px;
+	height: 50vh;
 	// border: 1px solid gray;
 	// background-color: whitesmoke;
 	&__photo {
@@ -12,7 +12,6 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			// background: linear-gradient(90deg, #FC5647 -8.95%, #F76C3A 100%);
 			background: black;
 			opacity: 0;
 			z-index: 2;

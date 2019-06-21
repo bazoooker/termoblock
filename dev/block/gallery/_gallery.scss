@@ -1,6 +1,7 @@
 .gallery {
 	@include flex-row(nowrap,center,center);
 	position: relative;
+	width: 100%;
 	&::before {
 		@include pseudo;
 		width: 100%;

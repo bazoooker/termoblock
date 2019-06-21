@@ -13,6 +13,7 @@ $(document).ready(function(){
 
 
     var swiper = new Swiper('.js-content-slider', {
+        slidesPerView: 'auto',
       direction: 'vertical',
       pagination: {
         el: '.swiper-pagination',

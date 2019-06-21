@@ -60,3 +60,14 @@
 .section_partners {
 	background: linear-gradient(270deg, #ECECEC 1%, rgba(236, 236, 236, 0) 100%);
 }
+.section_gallery {
+	align-items: flex-end;
+}
+
+.section_scheme {
+	@include grad-section;
+}
+
+.swiper-slide_footer {
+	height: 30rem !important;
+}
