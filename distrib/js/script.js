@@ -104,7 +104,22 @@ $(document).ready(function(){
         nextEl: '.js-hero-slider-next',
         prevEl: '.js-hero-slider-prev',
       },
+      on: {
+        init: function() {
+            var heroSliderTotalSlides = $('.hero-slider .swiper-slide').length;
+            $('.hero-slider__total').html('0'+heroSliderTotalSlides);
+        },
+         slideChange: function() {
+            $('.hero-slider__current').html('0'+(swiperHero.activeIndex+1));
+            // $('.sidebar__num').eq(swiperContent.activeIndex).addClass('sidebar__num_active');
+        },
+      }
     });
+
+
+// hero-slider__current
+// hero-slider__total
+
 
         // var swiper = new Swiper('.swiper-hero', {
         //   pagination: {
