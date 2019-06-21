@@ -78,8 +78,21 @@ $(document).ready(function(){
                 
             }
         },
+        slideChange: function() {
+            $('.sidebar__num').removeClass('sidebar__num_active');
+            $('.sidebar__num').eq(swiperContent.activeIndex).addClass('sidebar__num_active');
+        }
       }
     });
+
+
+    $('.js-slide-to-section').click(function() {
+        var slideTo = $(this).data('slide');
+        swiperContent.slideTo(slideTo-1);
+        $('.sidebar__num').removeClass('sidebar__num_active')
+        $('.sidebar__num').eq(slideTo-1).addClass('sidebar__num_active')
+    });
+
 
     var swiperHero = new Swiper('.js-hero-slider', {
       pagination: {
