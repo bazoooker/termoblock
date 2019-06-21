@@ -89,7 +89,7 @@
 
             <aside class="sidebar">
                 <span class="sidebar__num sidebar__num_active">01</span>
-                <span class="sidebar__num">02</span>
+                <span class="sidebar__num sidebar__num_black">02</span>
                 <span class="sidebar__num">03</span>
                 <span class="sidebar__num">04</span>
                 <span class="sidebar__num">05</span>
@@ -101,7 +101,7 @@
             <div class="swiper-container content-slider js-content-slider">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide js-menu-white">
                         <section class="section section_hero">
                             <div class="container">
                                 <img src="/img/logo.png" alt="" class="logo">
@@ -149,7 +149,7 @@
                         </section>
                     </div><!-- .swiper-slide -->
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide js-menu-black" data-menu-color="black">
                         <section class="section section_numbers">
                             <div class="container">
                                 <h2 class="mb-13">Термоблок в цифрах</h2>
@@ -177,7 +177,7 @@
                         </section>
                     </div><!-- .swiper-slide -->
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide js-menu-black" data-menu-color="black">
                         <section class="section section_products">
                             <div class="container">
                                 <div class="row mb-4">
@@ -237,7 +237,7 @@
                         </section>
                     </div> <!-- .swiper-slide -->
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" data-menu-color="black">
                         <section class="section section_partners">
                             <div class="container">
                                 <h2>Партнерская сеть</h2>
@@ -253,7 +253,7 @@
                         </section>
                     </div> <!-- .swiper-slide -->
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"  data-menu-color="black">
                         <section class="section section_advantages">
                             <div class="container">
                                 <h2>Наши преимущества</h2>
@@ -379,7 +379,7 @@
                         </section>
                     </div> <!-- .swiper-slide -->
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"  data-menu-color="black">
                         <section class="section section_gallery">
 
                             <div class="full-width">
@@ -435,7 +435,7 @@
                     </div> <!-- .swiper-slide -->
 
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide"  data-menu-color="white">
                         <section class="section section_scheme">
                             <div class="container">
                                 <h2 class="text-white mb-10">Схема работы</h2>
@@ -504,11 +504,10 @@
                         <section class="section section_footer">
                             <footer class="footer">
                                 <div class="container">
-                                    <div class="row">
-                                       <div class="col-6">
+                                    <div class="footer__contacts">
                                            <span href="#" class="link link_footer text-brutal text-white"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Барнаул, ул.Кулагина, 28</span>
-                                           <a href="mailto:market@termoblock.ru" class="link link_footer text-brutal text-white"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;market@termoblock.ru</a>
-                                           <a href="tel:+78001003734" class="link link_footer text-brutal text-white"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;8-800-100-37-34</a>
+                                           <a href="mailto:market@termoblock.ru" class="link link_footer text-brutal text-white" title="Написать нам"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;market@termoblock.ru</a>
+                                           <a href="tel:+78001003734" class="link link_footer text-brutal text-white" title="Позвонить нам"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;8-800-100-37-34</a>
                                            <div class="socials">
                                                <span class="socials__item">
                                                    
@@ -554,24 +553,23 @@
                                                     </svg>
                                                </span>
                                            </div>
-                                       </div>
-                                       <div class="col-3">
-                                            <div class="footer__links">
-                                               <a href="/" class="link link_deco link_deco-s">Гарантия</a>
-                                               <a href="/" class="link link_deco link_deco-s">Сертификаты</a>
-                                               <a href="/" class="link link_deco link_deco-s">Информационный раздел</a>
-                                           </div>
-                                       </div>
-                                       <div class="col-3">
-                                            <div class="footer__links">
-                                               <a href="/" class="link link_deco link_deco-s">Цены</a>
-                                               <a href="/" class="link link_deco link_deco-s">Сертификаты</a>
-                                               <a href="/" class="link link_deco link_deco-s">Расчетная программа</a>
-                                           </div>
+                                    </div> <!-- .footer__contacts -->
+                                    <div class="footer__links">
+                                        <div class="footer__links-col">
+                                            <a href="/" class="link link_deco link_deco-s text-white">Гарантия</a>
+                                            <a href="/" class="link link_deco link_deco-s text-white">Сертификаты</a>
+                                            <a href="/" class="link link_deco link_deco-s text-white">Информационный раздел</a>
                                         </div>
-                                    </div> <!-- .row -->
+
+                                        <div class="footer__links-col">
+                                            <a href="/" class="link link_deco link_deco-s text-white">Цены</a>
+                                            <a href="/" class="link link_deco link_deco-s text-white">Сертификаты</a>
+                                            <a href="/" class="link link_deco link_deco-s text-white">Расчетная программа</a>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="footer__madeby">
-                                        <span></span>
+                                        <span>© 2019 ТЕРМОБЛОК</span>
                                         <a href="" class="made-by" target="_blank">
                                             Разработка сайта &mdash; <span class="text-uppercase">e1media</span>
                                         </a>
@@ -592,6 +590,7 @@
 
         <!-- scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="/js/anime.min.js"></script>
         <script src="/js/swiper.min.js"></script>
         <script src="/js/ion.rangeSlider.js"></script>
         <script src="/js/jquery.nice-select.min.js"></script>

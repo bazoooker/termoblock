@@ -8,6 +8,7 @@
 	border-right: 1px solid rgb(255,255,255);
 	border-right: 1px solid rgba(255,255,255,.3);
 	@include flex-col(wrap,center,flex-start);
+	transition: 300ms;
 }
 
 .sidebar__num {
@@ -43,4 +44,14 @@
 
 .sidebar__num_active {
 	font-size: 3rem;
+}
+
+.sidebar.sidebar_black {
+	border-right: 1px solid rgba(0,0,0,.3);
+	.sidebar__num {
+		color: $color_black !important;
+	}
+}
+.sidebar.sidebar_black.sidebar_bg {
+	background-color: rgba(255,255,255,.6);
 }

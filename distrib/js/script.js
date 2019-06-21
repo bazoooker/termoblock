@@ -12,7 +12,7 @@ $(window).scroll(function() {
 $(document).ready(function(){
 
 
-    var swiper = new Swiper('.js-content-slider', {
+    var swiperContent = new Swiper('.js-content-slider', {
         slidesPerView: 'auto',
       direction: 'vertical',
       pagination: {
@@ -20,9 +20,68 @@ $(document).ready(function(){
         clickable: true,
       },
       mousewheel: true,
+      on: {
+        slideChangeTransitionStart: function () {
+            if (swiperContent.isEnd == false) {
+                anime({
+                  targets: '.sidebar',
+                  translateY: 0,
+                  easing: 'linear',
+                  duration: 100
+                });
+                $('.header').removeClass('header_last-section');
+                switch (swiperContent.activeIndex) {
+                    case 0:
+                        $('.header').removeClass('header_black');
+                        $('.sidebar').removeClass('sidebar_black sidebar_bg');
+                        break;
+                    case 1:
+                        $('.header').addClass('header_black');
+                        $('.sidebar').addClass('sidebar_black').removeClass('sidebar_bg');
+                        break;
+                    case 2:
+                        $('.header').addClass('header_black');
+                        $('.sidebar').addClass('sidebar_black').removeClass('sidebar_bg');
+                        break;
+                    case 3:
+                        $('.header').addClass('header_black');
+                        $('.sidebar').addClass('sidebar_black').removeClass('sidebar_bg');
+                        break;
+                    case 4:
+                        $('.header').addClass('header_black');
+                        $('.sidebar').addClass('sidebar_black').removeClass('sidebar_bg');
+                        break;
+                    case 5:
+                        $('.header').addClass('header_black');
+                        $('.sidebar').addClass('sidebar_black sidebar_bg');
+                        break;
+                    case 6:
+                        $('.header').removeClass('header_black');
+                        $('.sidebar').removeClass('sidebar_black sidebar_bg');
+                        break;
+                    case 7:
+                        $('.header').addClass('header_black');
+                        $('.sidebar').addClass('sidebar_black');
+                        break;
+                    default:;
+                }
+            } else {
+                $('.header').addClass('header_last-section');
+                var footerHeight = $('.footer').height();
+                anime({
+                  targets: '.sidebar',
+                  translateY: -(footerHeight),
+                  easing: 'linear',
+                  duration: 100
+                });
+
+                
+            }
+        },
+      }
     });
 
-    var swiper = new Swiper('.js-hero-slider', {
+    var swiperHero = new Swiper('.js-hero-slider', {
       pagination: {
         el: '.js-hero-slider-progressbar',
         type: 'progressbar',
