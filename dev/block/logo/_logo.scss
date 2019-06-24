@@ -5,6 +5,7 @@
 	text-decoration: none;
 	background-image: url(/img/logo.svg); 
 	@include bg-contain;
+	z-index: 2;
 
 	&_header {
 		flex: 0 0 313px;

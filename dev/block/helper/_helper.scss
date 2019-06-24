@@ -7,6 +7,39 @@
 	}
 }
 
+.hideme {
+	opacity: 0;
+	// transform: translateX(-15px);
+	transition: 700ms !important;
+}
+.del200 	{transition-delay: 200ms !important;}
+.del400 	{transition-delay: 400ms !important;}
+.del600 	{transition-delay: 500ms !important;}
+.del800 	{transition-delay: 600ms !important;}
+.del1000 {transition-delay: 1000ms !important;}
+.del1200 {transition-delay: 1200ms !important;}
+.del1400 {transition-delay: 1400ms !important;}
+.del1600 {transition-delay: 1600ms !important;}
+
+.hideme_up {
+	transform: translateY(45px);
+}
+.hideme_left {
+	transform: translateX(-45px);
+}
+.hideme_right {
+	transform: translateX(45px);
+}
+.hideme_down {
+	transform: translateY(-45px);
+}
+
+.hideme_visible {
+	// transition-delay: 3000ms;
+	transform: none !important;
+	opacity: 1;
+}
+
 .h-big-wave-deco {
 	position: relative;
 	width: 100%;

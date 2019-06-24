@@ -3,6 +3,9 @@
 	height: 100%;
 	@include flex-row(wrap,flex-start,center);
 	overflow: hidden;
+	.container {
+		z-index: 2;
+	}
 
 	h2 {
 		font-size: 6rem;
@@ -71,3 +74,41 @@
 .swiper-slide_footer {
 	height: 33rem !important;
 }
+
+
+
+
+// .section_hero {
+// 	svg {
+// 		position: absolute;
+// 		left: 0;
+// 		height: 100%;
+// 	}
+// }
+// .section_numbers {
+// 	svg {
+// 		position: absolute;
+// 		left: 0;
+// 		height: 100%;
+// 	}
+// }
+// .section_products {
+// 	& > svg {
+// 		position: absolute;
+// 		left: 475px;
+// 		height: 100%;
+// 	}
+// }
+
+// .section_advantages {}
+// .section_gallery {}
+// .section_scheme {}
+// .section_about {}
+// .section_footer {}
+
+// .section__deco {
+// 	position: absolute;
+// 	width: 450px;
+// 	height: 100%;
+// 	z-index: 1;
+// }

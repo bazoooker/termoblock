@@ -59,6 +59,8 @@ $(document).ready(function(){
       mousewheel: true,
       on: {
         slideChangeTransitionStart: function () {
+            
+
             if (swiperContent.isEnd == false) {
                 anime({
                   targets: '.sidebar',
@@ -111,13 +113,14 @@ $(document).ready(function(){
                   easing: 'linear',
                   duration: 100
                 });
-
-                
             }
         },
         slideChange: function() {
             $('.sidebar__num').removeClass('sidebar__num_active');
             $('.sidebar__num').eq(swiperContent.activeIndex).addClass('sidebar__num_active');
+
+            var ggg = $('.content-slider .content-slide').eq(swiperContent.activeIndex);
+            var yyy = $(ggg).find('.hideme').addClass('hideme_visible');
         }
       }
     });
