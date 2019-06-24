@@ -67,12 +67,45 @@
                 </div>
                 <div class="header__options">
                     <div class="user-options">
-                        <button class="user-options__city">
+                        <button class="user-options__city js-city-change">
                             Ваш город:&nbsp;&nbsp;
-                            <span>Москва&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></span>
-                            <!--в спан будет индджектиться выбранный город-->
+                            <span class="js-city-holder">Москва&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                            
                         </button>
                         <a href="tel:88001003734" class="user-options__tel btn btn_main btn_size-m"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;8-800-100-37-34</a>
+
+                        <div class="user-options__city-list">
+                            <span class="user-options__city-option js-city-inject">Барнаул</span>
+                            <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                            <span class="user-options__city-option js-city-inject">Краснодар</span>
+                            <span class="user-options__city-option js-city-inject">Воронеж</span>
+                            <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                            <span class="user-options__city-option js-city-inject">Барнаул</span>
+                            <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                            <span class="user-options__city-option js-city-inject">Краснодар</span>
+                            <span class="user-options__city-option js-city-inject">Воронеж</span>
+                            <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                            <span class="user-options__city-option js-city-inject">Барнаул</span>
+                            <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                            <span class="user-options__city-option js-city-inject">Краснодар</span>
+                            <span class="user-options__city-option js-city-inject">Воронеж</span>
+                            <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                            <span class="user-options__city-option js-city-inject">Барнаул</span>
+                            <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                            <span class="user-options__city-option js-city-inject">Краснодар</span>
+                            <span class="user-options__city-option js-city-inject">Воронеж</span>
+                            <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                            <span class="user-options__city-option js-city-inject">Барнаул</span>
+                            <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                            <span class="user-options__city-option js-city-inject">Краснодар</span>
+                            <span class="user-options__city-option js-city-inject">Воронеж</span>
+                            <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                            <span class="user-options__city-option js-city-inject">Барнаул</span>
+                            <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                            <span class="user-options__city-option js-city-inject">Краснодар</span>
+                            <span class="user-options__city-option js-city-inject">Воронеж</span>
+                            <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -591,6 +624,8 @@
         </main>
 
 
+
+        <div class="overlay overlay_transparent js-close-city-change"></div><!--оверлей для закрытия выбора города при клике по окну вне выпадашки городов-->
 
 
 

@@ -11,6 +11,43 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
 
+    $('.js-city-change').on('click', function() {
+        $('.user-options__city').addClass('user-options__city_active');
+        $('.user-options__city-list').addClass('user-options__city-list_active');
+        $('.overlay_transparent.js-close-city-change').fadeIn(200);
+    });
+
+    $('.js-close-city-change').on('click', function() {
+        $('.user-options__city').removeClass('user-options__city_active');
+        $('.user-options__city-list').removeClass('user-options__city-list_active');
+        $('.overlay_transparent.js-close-city-change').fadeOut(200);  
+    });
+
+    $('.js-city-inject').on('click', function(){
+        var thisCity = $(this).html();
+        var thisCityLength = $(this).html().length;
+
+        if(thisCityLength>7) {
+            var maxLength = 7;
+            var thisCity = (thisCity.substring(0, maxLength)) + ' ...';
+        }
+
+
+        // console.log(trimmedString);
+        $('.js-city-holder').html(thisCity);
+
+        $('.user-options__city').removeClass('user-options__city_active');
+        $('.user-options__city-list').removeClass('user-options__city-list_active');
+        $('.overlay_transparent.js-close-city-change').fadeOut(200);
+    });
+
+
+
+    // js-city-holder
+    // js-close-city-change
+    // js-city-change
+    // user-options__city-list
+
 
     var swiperContent = new Swiper('.js-content-slider', {
         slidesPerView: 'auto',
