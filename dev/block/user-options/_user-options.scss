@@ -76,3 +76,31 @@
 		color: $color_main;
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.user-options {
+		margin: 0;
+		// flex-wrap: wrap;
+		// flex-flow: row-reverse;
+		display: block;
+	}
+	.user-options__tel,
+	.user-options__city {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.user-options__city-list {
+		width: 200%;
+	    right: 0;
+	    left: auto;
+	    top: 75px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.user-options__city {
+		display: none;
+	}
+}

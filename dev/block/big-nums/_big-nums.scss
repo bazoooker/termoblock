@@ -6,11 +6,12 @@
 	position: relative;
 	display: block;
 	padding: 0 0 3.7rem 0;
-	margin: 0 0 2.3rem 0;
+	margin: 0 0 1.8rem 0;
 	color: $color_gray;
-	font-size: 8rem;
+	font-size: 7rem;
 	font-family: $russo;
 	line-height: .8;
+	transform-origin: left center;
 	&::before {
 		@include pseudo;
 		bottom: 0;

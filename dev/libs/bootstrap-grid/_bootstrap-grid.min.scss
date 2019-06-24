@@ -3,7 +3,9 @@
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */@-ms-viewport {
+ */
+
+ @-ms-viewport {
 	width:device-width;
 }
 
@@ -17,7 +19,7 @@ html {
 // }
 
 .container {
-	width: 100%;
+	width: 85%;
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
@@ -42,11 +44,28 @@ html {
 // 	}
 // }
 
-@media (min-width:1200px) {
+@media (min-width:992px) {
 	.container {
-		max-width: 1140px;
+		max-width: 960px;
+		padding-left: 60px;
 	}
 }
+
+
+@media (min-width:1200px) {
+	.container {
+		max-width: 960px;
+		padding-left: 15px;
+	}
+}
+@media (min-width:1400px) {
+	.container {
+		max-width: 1170px;
+		padding-left: 15px;
+	}
+}
+
+
 
 .container-fluid {
 	width: 100%;

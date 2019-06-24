@@ -11,6 +11,8 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
 
+    $('.content-slide').eq(0).find('.hideme').addClass('hideme_visible');
+
     $('.js-city-change').on('click', function() {
         $('.user-options__city').addClass('user-options__city_active');
         $('.user-options__city-list').addClass('user-options__city-list_active');
@@ -77,6 +79,29 @@ $(document).ready(function(){
                     case 1:
                         $('.header').addClass('header_black');
                         $('.sidebar').addClass('sidebar_black').removeClass('sidebar_bg');
+                        $('.counter').each(function() {
+                          var $this = $(this),
+                              countTo = $this.attr('data-count');
+                          $({ countNum: $this.text()}).animate({
+                            countNum: countTo
+                          },
+                          {
+                            duration: 1200,
+                            easing:'swing',
+                            step: function() {
+                              $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function() {
+                              $this.text(this.countNum);
+                              anime({
+                                  targets: '.counter',
+                                  translateY: '-12px',
+                                  delay: anime.stagger(200) // increase delay by 100ms for each elements.
+                                });
+                            }
+
+                          });  
+                        });
                         break;
                     case 2:
                         $('.header').addClass('header_black');
