@@ -56,7 +56,11 @@
         <header class="header">
             <div class="container header__content">
                 <div class="header__menu-btn">
-                    кнопка
+                    <div class="btn-burger js-open-mobile-menu">
+                        <span class="btn-burger__bar"></span>
+                        <span class="btn-burger__bar"></span>
+                        <span class="btn-burger__bar"></span>
+                    </div>
                 </div>
                 <div class="header__nav">
                     <div class="nav">
@@ -649,6 +653,72 @@
         <div class="overlay overlay_transparent js-close-city-change"></div><!--оверлей для закрытия выбора города при клике по окну вне выпадашки городов-->
 
 
+
+        <div id="mobile-menu" class="menu menu_fullscreen menu_mobile-menu">
+            <span class="menu__btn-close"></span>
+            <div class="container">
+                <header class="menu__header">
+                    <div class="user-options">
+                            <button class="user-options__city js-city-change">
+                                Ваш город:&nbsp;&nbsp;
+                                <span class="js-city-holder">Москва&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                
+                            </button>
+                            <a href="tel:88001003734" class="user-options__tel btn btn_main btn_size-m"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;8-800-100-37-34</a>
+
+                            <div class="user-options__city-list">
+                                <span class="user-options__close js-close-city-change"></span>
+                                <div class="user-options__caption">
+                                    <h4>Выберите город</h4>
+                                </div>
+                                <span class="user-options__city-option js-city-inject">Барнаул</span>
+                                <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                                <span class="user-options__city-option js-city-inject">Краснодар</span>
+                                <span class="user-options__city-option js-city-inject">Воронеж</span>
+                                <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                                <span class="user-options__city-option js-city-inject">Барнаул</span>
+                                <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                                <span class="user-options__city-option js-city-inject">Краснодар</span>
+                                <span class="user-options__city-option js-city-inject">Воронеж</span>
+                                <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                                <span class="user-options__city-option js-city-inject">Барнаул</span>
+                                <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                                <span class="user-options__city-option js-city-inject">Краснодар</span>
+                                <span class="user-options__city-option js-city-inject">Воронеж</span>
+                                <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                                <span class="user-options__city-option js-city-inject">Барнаул</span>
+                                <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                                <span class="user-options__city-option js-city-inject">Краснодар</span>
+                                <span class="user-options__city-option js-city-inject">Воронеж</span>
+                                <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                                <span class="user-options__city-option js-city-inject">Барнаул</span>
+                                <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                                <span class="user-options__city-option js-city-inject">Краснодар</span>
+                                <span class="user-options__city-option js-city-inject">Воронеж</span>
+                                <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                                <span class="user-options__city-option js-city-inject">Барнаул</span>
+                                <span class="user-options__city-option js-city-inject">Санкт-Петербург</span>
+                                <span class="user-options__city-option js-city-inject">Краснодар</span>
+                                <span class="user-options__city-option js-city-inject">Воронеж</span>
+                                <span class="user-options__city-option js-city-inject">Нижневартовск</span>
+                            </div>
+                        </div>
+                </header>
+                <div class="menu__body">
+                    <div class="nav">
+                        <a href="/" class="nav__link link link_deco link_deco-l">Продукция</a>
+                        <a href="/" class="nav__link link link_deco link_deco-l">Сервис</a>
+                        <a href="/" class="nav__link link link_deco link_deco-l">Металлообработка</a>
+                        <a href="/" class="nav__link link link_deco link_deco-l">Новости</a>
+                        <a href="/" class="nav__link link link_deco link_deco-l">Компания</a>
+                        <a href="/" class="nav__link link link_deco link_deco-l">Контакты</a>
+                    </div>
+                </div>
+                <footer class="menu__footer">
+                    footer
+                </footer>
+            </div>
+        </div>
 
         <!-- scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
