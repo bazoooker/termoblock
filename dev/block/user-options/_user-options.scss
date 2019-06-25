@@ -103,4 +103,25 @@
 	.user-options__city {
 		display: none;
 	}
+	.user-options__tel {
+		font-size: 2rem;
+		animation: anim-tel 4s infinite;
+	}
+}
+
+
+
+@keyframes anim-tel {
+	0% {
+		transform: translateY(0);
+	}
+	5% {
+		transform: translateY(0px) scale(1.05);
+	}
+	10% {
+		transform: translateY(0px) scale(1);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }

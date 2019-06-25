@@ -228,6 +228,7 @@
 	background-color: #fff;
 	transform: translateX(110%);
 	transition-delay: 400ms;
+	// overflow: hidden;
 	&.active {
 		transform: translateX(0);
 		transition-delay: 0ms !important;

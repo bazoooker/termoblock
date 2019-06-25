@@ -33,3 +33,17 @@
 	margin-bottom: 2rem;
 	background-color: #FF2E00;
 }
+
+@media screen and (max-width: 992px) {
+	.timeline-item {
+		flex: 1 1 100%;
+		min-width: 100%;
+		margin: 0 0 4rem 0;
+	}
+	.time-item__step {
+		i {
+			transform: translateY(-50%) rotate(90deg);
+			transform-origin: center center;
+		}
+	}
+}

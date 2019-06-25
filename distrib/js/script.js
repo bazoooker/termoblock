@@ -144,6 +144,9 @@ $(document).ready(function(){
         $('.user-options__city').removeClass('user-options__city_active');
         $('.user-options__city-list').removeClass('user-options__city-list_active');
         $('.overlay_transparent.js-close-city-change').fadeOut(200);
+        setTimeout(function() {
+            $('.menu__btn-close').show(700);
+        },500);  
     });
 
 
@@ -732,6 +735,15 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
+    if ( $(window).width() < 992) {
+        if (swiperContent.params.freeMode !== true) {
+            swiperContent.params.freeMode = true;
+        }
+    }else {
+        if (swiperContent.params.freeMode !== false) {
+            swiperContent.params.freeMode = false;
+        }
+    }
 
     $(window).resize(function() {
         if ( $(window).width() < 992) {

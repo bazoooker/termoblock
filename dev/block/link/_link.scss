@@ -72,3 +72,26 @@
 		color: $color_main !important;
 	}
 }
+
+@media screen and (max-width: 992px) {
+	.link_footer {
+		font-size: 2.4rem;
+	}
+	.link_download {
+		display: block;
+		font-size: 2.6rem;
+		margin: 3rem 0;
+		padding: 2rem;
+    	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+    	text-align: center;
+		svg {
+			transform: translateY(8px);
+		}
+		span {
+			text-decoration: underline;
+			text-decoration-style: dotted;
+			text-underline-position: under; 
+		}
+	}
+		
+}

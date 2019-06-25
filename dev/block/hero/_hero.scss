@@ -137,17 +137,12 @@
 }
 @media screen and (max-width: 992px) 	{
 	.hero {
-		height: 950px;
+		// height: 950px;
 	}
 }
 @media screen and (max-width: 768px) 	{}
 @media screen and (max-width: 568px) 	{
-	.hero {
-		&::before {
-			display: none;
-		}
-		br {display: none;}
-	}
+	
 }
 @media screen and (max-width: 414px) 	{}
 @media screen and (max-width: 375px) 	{}

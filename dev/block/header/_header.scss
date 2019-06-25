@@ -41,6 +41,9 @@
 	.user-options__city {
 		color: $color_gray;
 	}
+	.btn-burger__bar {
+		background-color: $color_gray;
+	}
 }
 .header__menu-btn {
 	display: none;
@@ -54,14 +57,23 @@
 }
 @media screen and (max-width: 1024px) {}
 @media screen and (max-width: 992px) {
+	.header {
+		background-color: #fff;
+		height: 10rem;
+		box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+	}
 	.header__content {
 		@include flex-row(nowrap, space-between, center);
 	}
 	.header__menu-btn {
 		display: block;
+		margin-left: -14px;
 	}
 	.header__nav {
 		display: none;
+	}
+	.header__options {
+		flex: 1 1 10%;
 	}
 }
 @media screen and (max-width: 768px) {}

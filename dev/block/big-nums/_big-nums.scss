@@ -22,6 +22,14 @@
 	}
 }
 
+@media screen and (max-width: 992px) {
+	.big-nums {
+		.col-md-4 {
+			margin-bottom: 4rem;
+		}
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.big-nums {
 		&::before {
