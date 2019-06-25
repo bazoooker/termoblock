@@ -1,10 +1,8 @@
 .menu {
-
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	z-index:0;
-	transition: opacity 300ms;
+	z-index:3;
 	height: 0;
 	min-height: 0;
 	max-height: 0;
@@ -12,23 +10,46 @@
 	overflow: hidden;
 	background-color: #fff;
 
-
-	// .container {
-	// 	@include flex-row(wrap, space-between, stretch);
-	// 	min-height: 100%;
-	// 	max-width: 1182px;
-	// 	padding: 0 11px;
-	// }
-
 	&.active {
 		opacity: 1;
 		z-index: 3;
-		// overflow-y: scroll;
+
+		.menu__header {
+			transform: translateY(0);
+			transition: 400ms;
+			transition-delay: 200ms;
+			&::before {
+				width: 0;
+				transition: 400ms;
+				transition-delay: 1000ms;
+			}
+			&::after {
+				width: 0;
+				transition: 400ms;
+				transition-delay: 600ms;
+			}
+			.logo {
+				transform: translateY(0%);
+			}
+		}
+		.nav__link {
+			opacity: 1;
+			transform: translateX(0px);
+			transition: 400ms;
+			transition-delay: 1400ms;
+		}
+		
+		.menu__footer {
+			transform: translateY(0);
+			opacity: 1;
+			transition: 400ms;
+			transition-delay: 1800ms
+		}
 	}
 	.nav {
 		@include flex-row(wrap,flex-start,center);
-		margin-bottom: 40px;
-	    padding-bottom: 40px;
+		margin: 0;
+	    padding-bottom: 4rem;
 	    border-bottom: 1px solid rgba(255,255,255,.4);
 	}
 	.nav__link {
@@ -38,6 +59,10 @@
 		min-width: 100%;
 		color: $color_gray !important;
 		font-size: 20px;
+		opacity: 0;
+		transform: translateX(-40px);
+		transition: all 250ms;
+		transition-delay: 150ms;
 		&:hover {
 			background: none;
 			padding: 8px 0 !important;
@@ -50,6 +75,9 @@
 		.user-options__city {
 			display: block;
 			color: $color_gray;
+			&:hover {
+				background-color: lightgray;
+			}
 		}
 		.user-options__city-list {
 			position: relative;
@@ -58,7 +86,7 @@
 			top: 0;
 			right: 0;
 			width: 90%;
-			height: 100%;
+			height: 100vh;
 			overflow-y: auto;
 			background: white;
 			@include bg-cover;
@@ -67,14 +95,15 @@
 			background-color: whitesmoke;
 			transition: all 400ms;
 			transition-delay: 300ms;
+			z-index: 10;
 
 
 			&::before {
 				@include pseudo;
 				top: 0;
 				left: -100%;
-				width: 180px;
-				height: 100%;
+				width: 150px;
+				height: 150%;
 				background-color: lightgray;
 				opacity: 0;
 				transform: skew(-19deg);
@@ -86,7 +115,7 @@
 				transform: translateX(0%);
 				transition-delay: 0ms;
 				&:before {
-					left: 100%;
+					left: -50%;
 					opacity: .18;
 					transition: 800ms;
 				}
@@ -175,14 +204,16 @@
 			}
 		}
 	}
+	.menu__footer {
+		transform: translateY(101%);
+		opacity: 0;
+		transition: 150ms;
+		transition-delay: 300ms;
+	}
 }
-
 .menu_full-screen {
 	width: 100%;
 }
-
-
-
 .menu_mobile-menu {
 	position: fixed;
 	top: 0;
@@ -194,25 +225,20 @@
 	background-image: none;
 	opacity: 1;
 	transition: transform 500ms;	
-	z-index: 20 !important;
 	background-color: #fff;
-
-	// изменяется
 	transform: translateX(110%);
-
+	transition-delay: 400ms;
 	&.active {
 		transform: translateX(0);
+		transition-delay: 0ms !important;
 		&::before {
 	    	transform: rotate(180deg) translateX(0px);
 		}
 	}
-
 	.btn {width: 100%;}
-
 	.container {
 		padding: 0 20px !important;
 	}
-
 }
 
 
@@ -229,28 +255,78 @@
 
 
 .menu__header {
-	@include flex-row(nowrap, space-between, center);
-	width: 100%;
+	padding: 4rem 0rem 3rem 0rem;
+	margin: 0 0 4rem 0;
+	background-color: lightgray;
+	@include flex-row(wrap,center, flex-start);
+	transform: translateY(-100%);
+	transition: 350ms;
+	transition-delay: 500ms;
+	position: relative;
+	transition: 200ms;
+	transition-delay: 50ms;
+	z-index: 11;
+	&::before {
+		@include pseudo;
+		width: 120%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: $color_gray;
+		background-size: 50%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		z-index: 4;
+	}
+	&::after{
+		@include pseudo;
+		width: 120%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: whitesmoke;
+		z-index: 5;
+		opacity: 1;
+	}
+	.logo {
+		margin: 0 0 3rem 0;
+		width: 150px;
+		z-index: 1;
 
-	height: 70px;
-	padding: 0 0 0 20px;
-	margin: 0 0 40px 0;
-	border-bottom: 1px solid rgba(255,255,255,.4);
+		transform: translateY(-200px);
+		transition: 550ms;
+		transition-delay: 400ms;
+	}
+	.user-options {
+		display: flex;
+		flex-direction: column-reverse;
+		.user-options__city,
+		.user-options__tel {
+			width: 100%;
+			flex: 1 1 100%;
+			font-size: 2rem;
+			margin: 1rem 0;
+		}
+		.user-options__tel {
+			padding: 3rem;
+			font-size: 2.6rem;
+		}
+	}
 
-
-	// background-color: $color_main;
 }
 .menu__footer {
-	background-color: 300ms;
+	background-color: whitesmoke;
+	.link_footer,
+	.link_footer:visited, {
+		color: $color_main !important;
+		font-size: 2.3rem;
+	}
 }
-
 .menu__phone {
 	@include flex-row(wrap, flex-start, center);
 	height: 100%;
 	flex-grow: 1;
 	border-right: 1px solid rgba(255,255,255,.4);
-	
-
 	a {
 		display: block;
 		font-size: 22px;
@@ -258,72 +334,57 @@
 		font-weight: bold;
 		line-height: 1.3;
 		background: none;
-
 		&:hover,&:active {
 			color: black;
 			background: none;
 			text-decoration: none;
 		}
 	}
-
 	&:hover,&:active {
 		color: black;
 		text-decoration: none;
 	}
-
 	span {
 		font-size: 14px;
 		color: gray;
 		font-weight: normal;
 	}
 }
-
-
 .menu__nav {
-
 	a {
 		display: block;
 		padding: 12px 0 18px 0;
 		margin: 12px 0 12px 0;
-
 		color: black;
 		font-size: 18px;
 		font-weight: bold;
 		border-bottom: 1px solid gray;
-
 		font-family: 'Exo 2', sans-serif;
 		background: none;
-
 		&:hover {text-decoration: none; background: none;}
 		&:active,&:visited {text-decoration: none;color: black; background: none;}
-
 		&:last-child {margin-bottom: 0;}
 	}
 }
-
 
 .menu__body {
 	width: 100%;
 	@include flex-row(nowrap, space-between, stretch);
 }
 
-
 .menu__btn-close {
 	position: absolute;
 	top: 5px;
 	right: 5px;
-
 	width: 40px;
 	height: 40px;
 	background-color: transparent;
 	border: 0;
 	outline: 0;
 	cursor: pointer;
-
 	transform: rotate(45deg);
-
+	z-index: 12;
 	transition: 300ms;
-	
 	&:after {
 		@include pseudo;
 
@@ -334,7 +395,7 @@
 		width: 35px;
 		height: 1px;
 
-		background: lightgray;
+		background: $color_black;
 	}
 
 	&:before {
@@ -347,7 +408,7 @@
 		width: 1px;
 		height: 35px;
 
-		background: lightgray;
+		background: $color_black;
 	}
 
 	&:active {

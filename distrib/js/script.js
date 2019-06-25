@@ -17,12 +17,16 @@ $(document).ready(function(){
         $('.user-options__city').addClass('user-options__city_active');
         $('.user-options__city-list').addClass('user-options__city-list_active');
         $('.overlay_transparent.js-close-city-change').fadeIn(200);
+        $('.menu__btn-close').hide();
     });
 
     $('.js-close-city-change').on('click', function() {
         $('.user-options__city').removeClass('user-options__city_active');
         $('.user-options__city-list').removeClass('user-options__city-list_active');
-        $('.overlay_transparent.js-close-city-change').fadeOut(200);  
+        $('.overlay_transparent.js-close-city-change').fadeOut(200);
+        setTimeout(function() {
+            $('.menu__btn-close').show(700);
+        },500);   
     });
 
     $('.js-city-inject').on('click', function(){
