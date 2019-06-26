@@ -6717,7 +6717,7 @@ input.btn_main:visited:active {
   height: 33rem !important; }
 
 .section__video {
-  background-image: url(/img/bg/bg-hero.jpg);
+  background-image: url(/img/bg/bg-hero_min.jpg);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7559,7 +7559,7 @@ input.btn_main:visited:active {
   position: relative;
   width: 100%;
   height: 55vh;
-  background-image: url(/img/map-zaglushka.png);
+  background-image: url(/img/map-zaglushka-big.png);
   background-size: contain;
   background-position: 10% 50%;
   background-repeat: no-repeat; }
