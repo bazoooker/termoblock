@@ -35,7 +35,27 @@
 		box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
 	}
 }
-.user-options__tel {}
+.user-options__tel {
+	font-family: $russo;
+	font-size: 1.3rem;
+	flex: 1 0 20rem;
+	&visited{
+		color: #fff;
+		background-color: $color_main;
+
+	}
+	&:hover {
+		background-color: $color_black;
+	}
+	&:focus{
+		color: #fff;
+		background-color: $color_main;
+	}
+	&:active{
+		color: #fff;
+		background-color: $color_black;
+	}
+}
 
 
 .user-options__city-list {

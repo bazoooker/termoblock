@@ -37,7 +37,7 @@
 		opacity: .4;
 	}
 	&:hover .gallery-slide__photo-inner {
-		transform: scale(1);
+		transform: scale(1.2);
 	}
 }
 
@@ -60,7 +60,7 @@
 	width: 100%;
 	height: 100%;
 	flex: 1 1 100%;
-	transition: 400ms;
+	transition: 1400ms;
 }
 
 

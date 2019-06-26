@@ -13,8 +13,6 @@
 }
 
 .section_hero {
-	// background-image: url(/img/bg/bg-hero.jpg);
-	// @include bg-cover;
 	h1 {
 		margin-bottom: 1.5rem;
 		line-height: 1.3;
@@ -25,8 +23,15 @@
 }
 
 .section_numbers {
-	background-image: url(/img/bg/bg-scheme.png);
-	@include bg-cover;
+	.section__bg-zoom {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -99;
+		animation: anim-zoom 40s infinite linear;
+	}
 }
 
 .section__button {
@@ -53,6 +58,13 @@
 		background-color: $color_main;
 		z-index: 2;
 		transform: rotate(45deg);
+		transition: background-color 450ms;
+	}
+
+	&:hover::before {
+		transform: rotate(135deg);
+		transition: all 450ms;
+		background-color: $color_black;
 	}
 }
 
@@ -82,7 +94,7 @@
     top: 0; 
     left: 0; 
     width: 100%; 
-    height: 100%; 
+    // height: 100%; 
     z-index: -999;
     padding-bottom: 56.25%; 
     height: 0;
@@ -105,59 +117,6 @@
     }
 }
 
-// .section__video::before {
-//     position: absolute;
-//     content: '';
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     background-color: rgba(0,0,0,.6);
-//     z-index: 998;
-// }
-// .section__video iframe {
-//     position: absolute; 
-//     top: 0; 
-//     left: 0; 
-//     width: 100%; 
-//     height: 100%;
-// }
-
-
-// .section_hero {
-// 	svg {
-// 		position: absolute;
-// 		left: 0;
-// 		height: 100%;
-// 	}
-// }
-// .section_numbers {
-// 	svg {
-// 		position: absolute;
-// 		left: 0;
-// 		height: 100%;
-// 	}
-// }
-// .section_products {
-// 	& > svg {
-// 		position: absolute;
-// 		left: 475px;
-// 		height: 100%;
-// 	}
-// }
-
-// .section_advantages {}
-// .section_gallery {}
-// .section_scheme {}
-// .section_about {}
-// .section_footer {}
-
-// .section__deco {
-// 	position: absolute;
-// 	width: 450px;
-// 	height: 100%;
-// 	z-index: 1;
-// }
 
 .content-slider .swiper-slide {
     height: 100%;
@@ -214,6 +173,14 @@
 		}
 	}
 
+	.section__video {
+		position: absolute;	
+		height: 100%;	
+		iframe {
+			display: none;
+		}
+	}
+
 }
 @media screen and (max-width: 768px) 	{
 	.section {
@@ -231,3 +198,18 @@
 }
 @media screen and (max-width: 414px) 	{}
 @media screen and (max-width: 375px) 	{}
+
+
+
+@keyframes anim-zoom {
+	0% {
+		transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.6);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

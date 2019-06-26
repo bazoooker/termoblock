@@ -4,7 +4,11 @@
         height: 100%;
         left: 0;
         top: 0;
-        background: #666 url(/img/bg/bg-scheme.png);
+        // background: whitesmoke url(/img/bg/bg-scheme.png);
+        background: #FFFFFF;
+        background: -webkit-linear-gradient(top left, #FFFFFF, #B3B3B3);
+        background: -moz-linear-gradient(top left, #FFFFFF, #B3B3B3);
+        background: linear-gradient(to bottom right, #FFFFFF, #B3B3B3);
         z-index: 9999;
         &::before {
             position: absolute;
@@ -17,20 +21,23 @@
             z-index: 1000;
         }
         &.preloader_hidden {
-            transition: 600ms;
-            transition-delay: 1200ms;
+            transition: 500ms;
+            transition-delay: 850ms;
             width: 0;
+            // transform: translateX(-105%);
         }
         &.preloader_hidden::before {
-            transition: 600ms;
-            transition-delay: 600ms;
+            transition: 500ms;
+            transition-delay: 400ms;
+            // transform: translateY(-105%);
             height: 0;    
         } 
         &.preloader_hidden #cube-loader {
             transition-delay: 300ms;
-            transition: 600ms;
+            transition: 500ms;
             top: 25%;
             opacity: 0;
+            pointer-events: none;
         }
     }
     // .preloader::before {

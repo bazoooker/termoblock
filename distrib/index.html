@@ -52,45 +52,6 @@
 
     <body class="wrapper">
 
-<!--                 <style>
-                    .preloader {
-                        position: fixed;
-                        width: 100%;
-                        height: 100%;
-                        left: 0;
-                        top: 0;
-                        background: #666 url(/img/bg/bg-scheme.png);
-                        z-index: 9999;
-                    }
-                    .preloader::before {
-                        position: absolute;
-                        content: '';
-                        width: 100%;
-                        height: 100%;
-                        left: 0;
-                        top: 0;
-                        background: linear-gradient(332.21deg, #FF3A3A 24.54%, rgba(255, 153, 58, 1) 73.65%, #FFDAAE 94.53%);
-                        z-index: 1000;
-                    }
-
-                    .preloader.preloader_hidden::before {
-                        transition: 600ms;
-                        transition-delay: 600ms;
-                        height: 0;
-                    }
-                    .preloader.preloader_hidden {
-                        transition: 600ms;
-                        transition-delay: 1200ms;
-                        width: 0;
-                    }
-                    .preloader.preloader_hidden #cube-loader {
-                        transition-delay: 300ms;
-                        transition: 600ms;
-                        top: 25%;
-                        opacity: 0;
-                    }
-                </style> -->
-
                 <div class="preloader">
                     <div id="cube-loader">
                         <div class="caption">
@@ -255,6 +216,7 @@
 
                     <div class="swiper-slide content-slide js-menu-black" data-menu-color="black">
                         <section class="section section_numbers">
+                            <div class="section__bg-zoom" style="background-image: url(/img/bg/bg-scheme.png)"></div>
 
                             <div class="container">
                                 <h2 class="mb-13 hideme hideme_left del400">Термоблок в цифрах</h2>
@@ -304,9 +266,9 @@
                                             <span>Скачать каталог</span>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <img class="hideme hideme_right del600" src="/img/goods/prod-1.png" alt=""><br/>
-                                        <img class="hideme hideme_right del800" src="/img/goods/manufacturer.png" alt="">
+                                    <div class="col-lg-3 hideme hideme_right del600">
+                                        <img class="h-hover-zoom" src="/img/goods/prod-1.png" alt=""><br/>
+                                        <img class="h-hover-zoom" src="/img/goods/manufacturer.png" alt="">
                                     </div>
                                 </div>
 
@@ -841,12 +803,5 @@
         <script src="/js/script.js"></script>
         <script src="/js/common.js"></script>
 
-        <script>
-            $(document).ready(function() {
-                setTimeout(function() {
-                    $('.preloader').addClass('preloader_hidden');
-                }, 1000);
-            });
-        </script>
     </body>
 </html>
