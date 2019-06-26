@@ -51,6 +51,60 @@
 
 
     <body class="wrapper">
+
+<!--                 <style>
+                    .preloader {
+                        position: fixed;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background: #666 url(/img/bg/bg-scheme.png);
+                        z-index: 9999;
+                    }
+                    .preloader::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background: linear-gradient(332.21deg, #FF3A3A 24.54%, rgba(255, 153, 58, 1) 73.65%, #FFDAAE 94.53%);
+                        z-index: 1000;
+                    }
+
+                    .preloader.preloader_hidden::before {
+                        transition: 600ms;
+                        transition-delay: 600ms;
+                        height: 0;
+                    }
+                    .preloader.preloader_hidden {
+                        transition: 600ms;
+                        transition-delay: 1200ms;
+                        width: 0;
+                    }
+                    .preloader.preloader_hidden #cube-loader {
+                        transition-delay: 300ms;
+                        transition: 600ms;
+                        top: 25%;
+                        opacity: 0;
+                    }
+                </style> -->
+
+                <div class="preloader">
+                    <div id="cube-loader">
+                        <div class="caption">
+                          <div class="cube-loader">
+                            <div class="cube loader-1"></div>
+                            <div class="cube loader-2"></div>
+                            <div class="cube loader-4"></div>
+                            <div class="cube loader-3"></div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+
             
 
         <header class="header">
@@ -119,9 +173,14 @@
         </header>
 
         <main class="content" role="main">
-            
-            <!-- клик привязан к классу js-slide-to-section -->
-            <!-- скролл до слайда из data аттрибута -->
+
+            <!--
+
+            TIP
+            клик привязан к классу js-slide-to-section
+            скролл до слайда из data аттрибута
+
+            -->
             <aside class="sidebar">
                 <span class="sidebar__num sidebar__num_active js-slide-to-section" data-slide="1">01</span>
                 <span class="sidebar__num js-slide-to-section" data-slide="2">02</span>
@@ -138,6 +197,9 @@
 
                     <div class="swiper-slide content-slide js-menu-white">
                         <section class="section section_hero">
+                            <div class="section__video">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZxE_1up9K3Y?rel=0&amp;loop=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+                            </div>
                             <div class="container">
                                 <img src="/img/logo.png" alt="" class="logo hideme hideme_up del400">
                                 <div class="hero-slider">
@@ -764,6 +826,8 @@
                         </div>
                     </div>
                 </footer>
+                
+
         </div>
 
         <!-- scripts -->
@@ -776,5 +840,13 @@
         <script src="/js/jquery.visible.min.js"></script>
         <script src="/js/script.js"></script>
         <script src="/js/common.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                setTimeout(function() {
+                    $('.preloader').addClass('preloader_hidden');
+                }, 1000);
+            });
+        </script>
     </body>
 </html>
