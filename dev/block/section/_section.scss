@@ -181,6 +181,42 @@
 		}
 	}
 
+	.section__button {
+		position: static;
+		bottom: 0;
+		right: auto;
+		width: 100%;
+		height: auto;
+		a {
+			display: inline-block;
+			padding: 3rem 6rem;
+			color: #fff;
+			font-family: $russo;
+			font-size: 2rem;
+			text-align: center;
+			z-index: 3;
+			background-color: $color_main;
+			br{display: none;}
+		}
+		&::before {
+			display: none;
+			@include pseudo;
+			width: 100%;
+			height: 100%;
+			background-color: $color_main;
+			z-index: 2;
+			transform: rotate(45deg);
+			transition: background-color 450ms;
+		}
+
+		&:hover::before {
+			transform: rotate(135deg);
+			transition: all 450ms;
+			background-color: $color_black;
+		}
+	}
+
+
 }
 @media screen and (max-width: 768px) 	{
 	.section {

@@ -152,7 +152,20 @@
 // .pb-40 {padding-bottom: 40px !important;}
 // .pb-140 {padding-bottom: 140px !important;}
 
+	@media screen and (max-width: 1200px) {
+    	.hidden-to-xl {
+    		display: none !important;
+    	}
+    }
+    @media screen and (max-width: 992px) {
+    	.hidden-to-lg {
+    		display: none !important;
+    	}
+    }
     @media screen and (max-width: 768px) {
+    	.hidden-to-md {
+    		display: none !important;
+    	}
     	.h-md-hide-br {
     		br {
     			display: none;

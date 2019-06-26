@@ -3,10 +3,10 @@
 	@include flex-row(wrap,center,stretch);
 
 	&.gallery-slide_w1 {
-		flex: 0 0 14.2857%;
+		flex: 1 0 14.2857%;
 	}
 	&.gallery-slide_w2 {
-		flex: 0 0 28.57114%;
+		flex: 1 0 28.57114%;
 	}
 	// &__photo_big {
 	// 	flex: 1 1 100%;
@@ -42,10 +42,10 @@
 }
 
 .gallery-slide__photo_w50 {
-	flex: 0 0 50%;
+	flex: 1 0 50%;
 }
 .gallery-slide__photo_w100 {
-	flex: 0 0 100%;
+	flex: 1 0 100%;
 }
 
 .gallery-slide__photo_h50 {
