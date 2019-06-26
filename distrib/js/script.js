@@ -109,11 +109,11 @@ $(window).scroll(function() {
 
 
 $(document).ready(function(){
-    $(document).ready(function() {
-        setTimeout(function() {
-            $('.preloader').addClass('preloader_hidden');
-        }, 1000);
-    });
+    setTimeout(function() {
+        $('.preloader').addClass('preloader_hidden');
+    }, 1000);
+    
+    const tilt = $('.js-tilt').tilt();
 
     $('.content-slide').eq(0).find('.hideme').addClass('hideme_visible');
 
