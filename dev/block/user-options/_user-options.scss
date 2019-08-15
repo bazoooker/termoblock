@@ -3,7 +3,7 @@
 	flex: 1 1 100%;
 	min-width: 100%;
 	@include flex-row(nowrap,space-between,center);
-	margin-left: 5rem;
+	// margin-left: 5rem;
 }
 
 .user-options__city {
@@ -119,12 +119,12 @@
 	}
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
 	.user-options__city {
 		display: none;
 	}
 	.user-options__tel {
-		font-size: 2rem;
+		// font-size: 2rem;
 		animation: anim-tel 4s infinite;
 	}
 }

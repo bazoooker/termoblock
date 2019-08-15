@@ -19,14 +19,14 @@
 		&::before {
 			width: 0;
 			bottom: 0px;
-			left: -8px;
+			left: -6px;
 		}
 	}
 	.link_deco-s {
 		&::before {
 			width: 0;
 			bottom: 2px;
-			left: -6px;
+			left: -4px;
 		}
 	}
 
@@ -78,6 +78,9 @@
 				}
 			}
 		}
+	}
+	.link_black-accent {
+		color: black;
 	}
 
 .link_footer {

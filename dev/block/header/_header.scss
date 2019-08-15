@@ -1,9 +1,43 @@
 .header {
 	position: fixed;
+	left: 0;
+	top: 0;
 	z-index: 2;
 	width: 100%;
 	height: 14rem;
 	transition: 300ms;
+	&.header_inner-page {
+		position: relative;
+		height: 19rem;
+		background-color: white;
+		&::before {
+			position: absolute;
+			content: '';
+			left: 60rem;
+			top: 0;
+			width: 35rem;
+			height: 100%;
+			transform: skew(-30deg);
+			background-color: black;
+			opacity: .02;
+			pointer-events: none;
+		}
+		.header__content {
+			height: 14rem;
+		}
+	}
+}
+
+.header__topbar {
+	height: 5rem;
+	background: #F9F9F9;
+	background: -webkit-linear-gradient(left, #F9F9F9, #ECECEC);
+	background: -moz-linear-gradient(left, #F9F9F9, #ECECEC);
+	background: linear-gradient(to right, #F9F9F9, #ECECEC);
+	.container {
+		height: 100%;
+		@include flex-row(nowrap,space-between,center);
+	}
 }
 
 .header_white {
@@ -17,14 +51,15 @@
 
 .header__nav {
 	height: 100%;
-	flex: 1 1 100%;
+	// flex: 1 1 100%;
 }
 
 .header__options {
 	height: 100%;
 	width: 100%;
-	flex: 0 0 40rem;
+	flex: 0 0 38rem;
 	@include flex-row(nowrap,flex-start,center);
+	margin-left: auto;
 }
 
 .header_last-section {
@@ -49,19 +84,26 @@
 	display: none;
 }
 
+
 @media screen and (max-width: 1200px) {
 	.header__options {
 		padding-left: 5rem;
 		max-width: 250px;
 	}
 }
-@media screen and (max-width: 1024px) {}
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
 	.header {
 		background-color: #fff;
 		height: 10rem;
 		box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+		&.header_inner-page {
+			height: 14rem;
+			.logo {
+				margin: 0 4rem;
+			}
+		}
 	}
+	.header__topbar {display: none;}
 	.header__content {
 		@include flex-row(nowrap, space-between, center);
 	}
@@ -76,6 +118,19 @@
 		flex: 1 1 10%;
 	}
 }
+@media screen and (max-width: 992px) {
+}
 @media screen and (max-width: 768px) {}
-@media screen and (max-width: 568px) {}
+@media screen and (max-width: 568px) {
+	.header {
+		&.header_inner-page {
+			.logo {
+				display: none;
+			}
+		}
+	}
+	.header__options {
+		padding-left: 1.8rem;
+	}
+}
 @media screen and (max-width: 413px) {}

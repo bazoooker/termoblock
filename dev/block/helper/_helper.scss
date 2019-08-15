@@ -5,12 +5,39 @@
 	h1 {
 		margin: 40px 0 45px 0;
 	}
+
+	.content {
+		position: static;
+	}
 }
 
 .h-hover-zoom {
 	transition: 450ms;
 	&:hover {
 		transform: scale(1.06) !important;
+	}
+}
+
+.page-caption {
+	position: relative;
+	padding: 12.5rem 0 8rem 0;
+	background-image: url(/img/bg/bg-caption.jpg);
+	@include bg-cover;
+	overflow: hidden;
+	// z-index: -1;
+	h1, .breadcrumbs {
+		z-index: 1;
+	}
+	&::before {
+		position: absolute;
+		content: '';
+		left: 45rem;
+		top: 0;
+		width: 35rem;
+		height: 100%;
+		transform: skew(-30deg);
+		background-color: #fff;
+		opacity: .06;
 	}
 }
 
@@ -134,9 +161,90 @@
 	height: auto;
 }
 
+.img-bg {
+	position: relative;
+	width: 100%;
+	min-height: 500px;
+	background-color: whitesmoke;
+	@include flex-row(nowrap,center,center);
+	overflow: hidden;
+	transition: 400ms;
+	img {
+		width: 40%;
+		transition: 400ms;
+	}
+	&:hover {
+		background-color: #eaeaea;
+		img {
+			transform: translateY(-2rem);
+		}
+	}
+
+}
+
+.cta-small {
+	padding: 5rem;
+	background: url(/img/bg/bg-scheme_min.png) no-repeat center center lightgray;
+	background-size: cover;
+	.container {
+		@include flex-row(nowrap,space-between,center);
+	}
+}
+
+.fast-options {
+	position: fixed;
+	top: 20vh;
+	right: -14.8rem;
+}
+	.fast-options-item {
+		width: 20rem;
+		height: 5rem;
+		margin: 1px 0;
+		padding: 0 2rem 0 0;
+		background-color: $color_black;
+		color: #fff;
+		font-size: 15px;
+		line-height: 1.2;
+		transition: 300ms;
+		cursor: pointer;
+	    text-decoration: none;
+		@include flex-row(nowrap,flex-start,center);
+
+			&:visited {
+			    color: #fff;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+
+		    &:focus,
+		    &:active { 
+			    text-decoration: none;
+		        background-color: black;
+		        color: #fff;
+		        transition: 0ms;
+		    }
+			&:hover {
+				text-decoration: none;
+				transform: translateX(-14.8rem);
+				background-color: $color_main;
+			}
+		.fast-options-icon {
+			flex: 0 0 5.4rem;
+			text-align: center;
+		}
+	}
+
 .full-width {
 	width: 100%;
 }
+
+.pd-0 {padding: 0 !important;}
+.pd-1 {padding: 1rem !important;}
+.pd-2 {padding: 2rem !important;}
+.pd-3 {padding: 3rem !important;}
+.pd-4 {padding: 4rem !important;}
+.pd-5 {padding: 5rem !important;}
+.pd-6 {padding: 6rem !important;}
 
 .mb-0 	{margin-bottom: 0 !important;}
 .mb-1 	{margin-bottom: 1rem !important;}
@@ -157,6 +265,18 @@
     		display: none !important;
     	}
     }
+	@media screen and (max-width: 1024px) {
+		.fast-options {display: none;}
+		.img-bg {
+			min-height: 390px;
+		}
+		.pd-1 {padding: 0.7rem !important;}
+		.pd-2 {padding: 1.4rem !important;}
+		.pd-3 {padding: 2.1rem !important;}
+		.pd-4 {padding: 2.8rem !important;}
+		.pd-5 {padding: 3.5rem !important;}
+		.pd-6 {padding: 4.2rem !important;}
+	}
     @media screen and (max-width: 992px) {
     	.hidden-to-lg {
     		display: none !important;
@@ -171,6 +291,9 @@
     			display: none;
     		}
     	}
+    	.img-bg {
+			min-height: 340px;
+		}
 		.mb-3 	{margin-bottom: 2rem !important;}
 		.mb-4 	{margin-bottom: 3rem !important;}
 		.mb-6 	{margin-bottom: 4rem !important;}
@@ -178,7 +301,26 @@
 		.mb-10 {margin-bottom: 8rem !important;}
 		.mb-13 {margin-bottom: 10.5rem !important;}
 		.mb-20 {margin-bottom: 16rem !important;}
+
+		.pd-1 {padding: 0.5rem !important;}
+		.pd-2 {padding: 1rem !important;}
+		.pd-3 {padding: 1.5rem !important;}
+		.pd-4 {padding: 2rem !important;}
+		.pd-5 {padding: 2.5rem !important;}
+		.pd-6 {padding: 3rem !important;}
 		// .pb-14 {padding-bottom: 10rem !important;}
+
+		.cta-small {
+			padding: 5rem;
+			.container {
+				@include flex-row(wrap,center,center);
+				p.mb-0 {
+					text-align: center;
+					flex: 1 1 100%;
+					margin-bottom: 2rem !important;
+				}
+			}
+		}
     }
     @media screen and (max-width: 568px) {
 		// .mb-20 	{margin-bottom: 10px !important;}
@@ -189,8 +331,22 @@
 		.mb-10 {margin-bottom: 6rem !important;}
 		.mb-13 {margin-bottom: 7.5rem !important;}
 		.mb-20 {margin-bottom: 13.5rem !important;}
+
+		.pd-1 {padding: 0.3rem !important;}
+		.pd-2 {padding: 0.6rem !important;}
+		.pd-3 {padding: 0.9rem !important;}
+		.pd-4 {padding: 1.2rem !important;}
+		.pd-5 {padding: 1.5rem !important;}
+		.pd-6 {padding: 1.8rem !important;}
+
+		.img-bg {
+			min-height: 300px;
+		}
     }
     @media screen and (max-width: 413px) {
+    	.img-bg {
+			min-height: 280px;
+		}
 		.mb-3 	{margin-bottom: 1.5rem !important;}
 		.mb-4 	{margin-bottom: 2rem !important;}
 		.mb-6 	{margin-bottom: 3rem !important;}

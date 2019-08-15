@@ -1,9 +1,11 @@
 .breadcrumbs {
 	@include flex-row(nowrap,flex-start,center);
 	background-color: transparent;
-	padding: 6px 4px;
 	z-index: 2;
-	margin: 19px 0 40px 0;
+	i {
+		display: inline-block;
+		padding: 0 10px;
+	}
 }
 .breadcrumbs__item {
 	position: relative;
@@ -11,16 +13,17 @@
 	font-size: 14px;
 	color: #808080;
 	text-decoration: underline;
-	margin: 0 4px 0 0;
-	padding: 8px;
 	text-decoration: none;
-	transition: $tr2;
+	padding: 8px;
 	opacity: .85;
 	background: none;
-	&:visited,&:active,&:focus {background: none;}
-	&:hover {background: none; text-decoration: underline;}
+	color: #fff;
+	transition: 300ms;
+	&:visited,&:active,&:focus {background: none; color: #fff;}
+	&:hover {background: none; text-decoration: none; color: $color_main;}
 
-	&:visited {color: #808080;}
+
+	&:visited {color: #fff;}
 
 	&:first-child {
 		padding-left: 0;
@@ -57,18 +60,6 @@
 	// 	opacity: 1;
 	// 	&::after {opacity: 1;}
 	// }
-}
-.breadcrumbs__item:last-of-type+.breadcrumb__arrow {display: none;}
-
-.breadcrumb__arrow {
-	// поведение
-	display: block;
-	position: relative;
-	margin: 0 4px 0 0;
-	width: 13px;
-	height: 7px;
-
-	// стили
 }
 
 

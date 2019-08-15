@@ -9,6 +9,11 @@
 		font-size: 1.5rem;
 		font-family: 'Russo One';
 		color: #fff;
+		padding-left: 10px;
+		padding-right: 10px;
+		&::before {
+			left: 6px;
+		}
 	}
 }
 
@@ -18,9 +23,38 @@
 
 
 
+.nav-secondary {
+	width: 100%;
+	height: 100%;
+	@include flex-row(nowrap,flex-start,center);
+}
+
+.nav-secondary__link {
+	@include flex-row(nowrap,center,center);
+	padding: 0 12px;
+	color: $color_gray;
+	height: 100%;
+	font-size: 14px;
+	transition: 300ms;
+	&:last-child {
+		margin-left: auto;
+		&:hover {
+			background-color: $color_gray;
+			color: #fff;
+		}
+	}
+	&:hover {
+		background-color: #ededed;
+		text-decoration: none;
+		color: $color_black;
+	}
+}
+
 
 @media screen and (max-width: 1200px) {}
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+	.nav-secondary__link:last-child {display: none;}
+}
 @media screen and (max-width: 992px) {}
 @media screen and (max-width: 768px) {}
 @media screen and (max-width: 568px) {}

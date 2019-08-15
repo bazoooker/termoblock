@@ -110,7 +110,9 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
     setTimeout(function() {
-        $('.preloader').addClass('preloader_hidden');
+        if( !$('.preloader').hasClass('preloader_hidden') ) {
+            $('.preloader').addClass('preloader_hidden');
+        }
     }, 1000);
     
     const tilt = $('.js-tilt').tilt({
@@ -168,6 +170,7 @@ $(document).ready(function(){
         },500);  
     });
 
+    new WOW().init();
 
     // var swiperContent = new Swiper('.js-content-slider', {
     //     slidesPerView: 'auto',
