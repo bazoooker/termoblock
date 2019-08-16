@@ -25,6 +25,8 @@
 	}
 }
 
+
+
 .time-item__step {
 	font-size: 6rem;
 	display: inline-block;
@@ -49,6 +51,9 @@
 	margin-bottom: 2rem;
 	background-color: #FF2E00;
 	transition: 300ms;
+	&.timeline-item__line_gray {
+		background-color: gray;
+	}
 }
 
 @media screen and (max-width: 992px) {

@@ -30,6 +30,21 @@ input.btn_main:visited {
     }
 }
 
+.btn_white,
+.btn_white :visited,
+input.btn_white
+input.btn_white:visited {
+	background-color: white;
+	color: $color_main;
+	&:hover { 
+        text-decoration: none;
+    }
+    &:focus,
+    &:active { 
+        background-color: white;
+    }
+}
+
 .btn_call-icon {
 	position: relative;
 	padding-left: 100px !important;

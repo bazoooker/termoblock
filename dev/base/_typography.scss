@@ -95,6 +95,12 @@ a:visited {
 .text-white {color: #fff !important;}
 .text-accent { color: $color_main !important; }
 .text-black { color: $color_black !important; }
+.text-small {
+    font-size: .75em;
+}
+.not-important {
+    opacity: 0.75;
+}
 
 
 
