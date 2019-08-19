@@ -170,6 +170,36 @@ $(document).ready(function(){
         },500);  
     });
 
+    var prodPhotoAnimInProgress = false;
+    $('.js-prod-photos-change').click(function() {
+        let prodThumbImg = $(this).css('background-image');
+        if(!prodPhotoAnimInProgress) {
+            prodPhotoAnimInProgress = true;
+            $('#js-prod-photo-inject').removeClass('change-in').addClass('change-out');
+            $('.js-prod-photos-change').removeClass('active');
+            $(this).addClass('active');
+            setTimeout(function() {
+                $('#js-prod-photo-inject').css('background-image', prodThumbImg);
+            },300);
+            setTimeout(function() {
+                $('#js-prod-photo-inject').removeClass('change-out').addClass('change-in');
+                prodPhotoAnimInProgress = false;
+            },450);
+        }
+    });
+
+
+    $('.js-change-tab').click(function() {
+        $(this).parent().find('.js-change-tab').removeClass('active');
+        $(this).addClass('active');
+        var tabIndex = $(this).index();
+        var currentTabsContainer = $(this).parent().parent();
+
+        // $(currentTabsContainer).find('.tab-content-container').slideUp();
+        $(currentTabsContainer).find('.tab-content-container').slideUp().eq(tabIndex).slideDown();
+        // tab-content-container
+    });
+
     new WOW().init();
 
     // var swiperContent = new Swiper('.js-content-slider', {

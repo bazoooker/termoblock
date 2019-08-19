@@ -112,6 +112,10 @@ input.btn_white:visited {
 	@include font-kit(14px, 14px, 13px, 13px, 12px);
 	padding: 8px 12px;
 }
+.btn_block {
+	width: 100%;
+	text-align: center;
+}
 
 
 .btn-burger {
