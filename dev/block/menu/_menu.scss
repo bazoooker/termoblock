@@ -258,7 +258,7 @@
 .menu__header {
 	padding: 4rem 0rem 3rem 0rem;
 	margin: 0 0 4rem 0;
-	background-color: lightgray;
+	background-color: whitesmoke;
 	@include flex-row(wrap,center, flex-start);
 	transform: translateY(-100%);
 	transition: 350ms;
@@ -320,7 +320,6 @@
 	.link_footer,
 	.link_footer:visited, {
 		color: $color_main !important;
-		font-size: 2.3rem;
 	}
 }
 .menu__phone {

@@ -5,13 +5,14 @@ input.btn,
 input.btn:visited{
 	display: inline-block;
 	position: relative;	
-	overflow: hidden;
+	// overflow: hidden;
 	text-decoration: none !important;
 	cursor: pointer !important;
 	line-height: 100%;
 	text-align: center;
 	transition: 300ms;
 	letter-spacing: 1px;
+	z-index: 2;
 }
 
 
@@ -19,13 +20,31 @@ input.btn:visited{
 .btn_main :visited,
 input.btn_main
 input.btn_main:visited {
-	background-color: $color_main;
-	color: #fff;
+	position: relative;
+	background-color: $color_main !important;
+	color: #fff !important;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 108%;
+		height: 133%;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%) scale(0.8);
+		background-color: $color_gray;
+		opacity: 0;
+		transition: 300ms;
+		z-index: -1;
+	}
 	&:hover { 
-        text-decoration: underline;
+        text-decoration: none;
+        background-color: $color_black !important;
     }
     &:focus,
     &:active { 
+    	&::before {
+			animation: anim-btn 300ms ease;
+    	}
         background-color: transparent;
     }
 }
@@ -34,35 +53,71 @@ input.btn_main:visited {
 .btn_white :visited,
 input.btn_white
 input.btn_white:visited {
+	position: relative;
 	background-color: white;
 	color: $color_main;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 108%;
+		height: 133%;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%) scale(0.8);
+		background-color: white;
+		opacity: 0;
+		transition: 300ms;
+		z-index: -1;
+	}
 	&:hover { 
         text-decoration: none;
+        background-color: $color_black;
+        color: #fff;
+    }
+    &:focus,
+    &:active {
+    	color: #fff; 
+    	&::before {
+			animation: anim-btn 300ms ease;
+    	}
+        background-color: $color_black;
+    }
+}
+
+.btn_secondary,
+.btn_secondary :visited,
+input.btn_white
+input.btn_white:visited {
+	background-color: $color_black;
+	color: #fff !important;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 108%;
+		height: 133%;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%) scale(0.8);
+		background-color: $color_main;
+		opacity: 0;
+		transition: 300ms;
+		z-index: -1;
+	}
+	&:hover { 
+        text-decoration: none;
+        background-color: $color_main;
+        color: #fff;
     }
     &:focus,
     &:active { 
-        background-color: white;
+        background-color: $color_main;
+        &::before {
+			animation: anim-btn 300ms ease;
+    	}
     }
 }
 
-.btn_call-icon {
-	position: relative;
-	padding-left: 100px !important;
-	&::before {
-		position: absolute;
-	    content: '';
-	    width: 40px;
-	    height: 40px;
-	    left: 37px;
-	    top: 50%;
-	    background: url(/img/icons/tel.svg);
-	    background-position: 50% 50%;
-	    background-size: contain;
-	    background-repeat: no-repeat;
-	    transform: translateY(-50%);
-	}
 
-}
 
 // .btn_secondary, input.btn_secondary {
 // 	background-color: #ededed;
@@ -95,22 +150,22 @@ input.btn_white:visited {
 // 	&:focus 	{}
 // }
 
-.btn_size-xl {
-	@include font-kit(19px, 18px, 17px, 16px, 14px);
-	padding: 14px 18px;
-}
+// .btn_size-xl {
+// 	@include font-kit(19px, 18px, 17px, 16px, 14px);
+// 	padding: 14px 18px;
+// }
 
 .btn_size-l {
 	@include font-kit(16px, 16px, 15px, 15px, 14px);
-	padding: 12px 16px;
+	padding: 1.8rem 2rem;
 }
 .btn_size-m {
 	font-size: 1.5rem;
-	padding: 10px 14px;
+	padding: 1.6rem 1.8rem;
 }
 .btn_size-s {
 	@include font-kit(14px, 14px, 13px, 13px, 12px);
-	padding: 8px 12px;
+	padding: 1.4rem 1.6rem;
 }
 .btn_block {
 	width: 100%;
@@ -162,5 +217,28 @@ input.btn_white:visited {
 			width: 25px;
 			height: 25px;
 		}
+	}
+}
+
+@keyframes anim-btn {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(-50%) scale(0.9);
+	}
+	40% {
+		opacity: .3;
+		transform: translateX(-50%) translateY(-50%) scale(1.01);
+	}
+	60% {
+		opacity: .2;
+		transform: translateX(-50%) translateY(-50%) scale(1.05);
+	}
+	99% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(-50%) scale(1.25);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(-50%) scale(.9);
 	}
 }

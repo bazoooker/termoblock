@@ -20,7 +20,11 @@
 	color: #fff;
 	transition: 300ms;
 	&:visited,&:active,&:focus {background: none; color: #fff;}
-	&:hover {background: none; text-decoration: none; color: $color_main;}
+	&:hover {
+		background: none; 
+		text-decoration: none; 
+		color: $color_main !important;
+	}
 
 
 	&:visited {color: #fff;}
@@ -63,7 +67,7 @@
 }
 
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 992px) {
 	.breadcrumbs {	
 		display: none;
 	}

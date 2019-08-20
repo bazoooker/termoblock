@@ -29,13 +29,15 @@
 	@include flex-row(nowrap,flex-start,center);
 }
 
-.nav-secondary__link {
+.nav-secondary__link,
+.nav-secondary__link:visited, {
 	@include flex-row(nowrap,center,center);
 	padding: 0 12px;
 	color: $color_gray;
 	height: 100%;
 	font-size: 14px;
 	transition: 300ms;
+	user-select: none;
 	&:last-child {
 		margin-left: auto;
 		&:hover {
